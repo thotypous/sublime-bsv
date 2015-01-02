@@ -6,15 +6,14 @@
 	<dict>
 		<key>fileTypes</key>
 		<array>
-			<string>v</string>
-			<string>V</string>
+			<string>bsv</string>
 		</array>
 		<key>foldingStartMarker</key>
 		<string>(begin)\s*(//.*)?$</string>
 		<key>foldingStopMarker</key>
 		<string>^\s*(end)$</string>		
 		<key>name</key>
-		<string>Verilog</string>
+		<string>BSV</string>
 		<key>patterns</key>
 		<array>
 			<!-- module XXX -->
@@ -24,18 +23,18 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>storage.type.verilog</string>
+						<string>storage.type.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.class.verilog</string>
+						<string>entity.name.type.class.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*(module|function|primitive)\s+\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
 				<key>name</key>
-				<string>meta.entity.module.verilog</string>
+				<string>meta.entity.module.bsv</string>
 			</dict>
 
 			<dict>
@@ -45,23 +44,23 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.class.verilog</string>
+						<string>entity.name.type.class.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.instance.verilog</string>
+						<string>entity.name.type.instance.bsv</string>
 					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
-						<string>keyword.operator.parenthesis.round.verilog</string>
+						<string>keyword.operator.parenthesis.round.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*(?!else)(?!begin)([a-zA-Z_][a-zA-Z0-9_]*)\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*(\()</string>
 				<key>name</key>
-				<string>meta.definition.verilog</string>
+				<string>meta.definition.bsv</string>
 			</dict>
 
 
@@ -72,43 +71,43 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.class.verilog</string>
+						<string>entity.name.type.class.bsv</string>
 					</dict>
 					<key>2</key> <!-- # -->
 					<dict>
 						<key>name</key>
-						<string>keyword.other.verilog</string>
+						<string>keyword.other.bsv</string>
 					</dict>
 					<key>3</key> <!-- ( -->
 					<dict>
 						<key>name</key>
-						<string>keyword.operator.parenthesis.round.verilog</string>
+						<string>keyword.operator.parenthesis.round.bsv</string>
 					</dict>
 					<key>4</key> <!-- something,something -->
 					<dict>
 						<key>name</key>
-						<string>keyword.other.verilog</string>
+						<string>keyword.other.bsv</string>
 					</dict>
 					<key>5</key> <!-- ) -->
 					<dict>
 						<key>name</key>
-						<string>keyword.operator.parenthesis.round.verilog</string>
+						<string>keyword.operator.parenthesis.round.bsv</string>
 					</dict>
 					<key>6</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.instance.verilog</string>
+						<string>entity.name.type.instance.bsv</string>
 					</dict>
 					<key>7</key>
 					<dict>
 						<key>name</key>
-						<string>keyword.operator.parenthesis.round.verilog</string>
+						<string>keyword.operator.parenthesis.round.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*(?!else)(?!begin)([a-zA-Z_][a-zA-Z0-9_]*)\s+([#])(\()([ ._+`,a-zA-Z0-9]+)(\))\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*(\()</string>
 				<key>name</key>
-				<string>meta.definition.withparameter.verilog</string>
+				<string>meta.definition.withparameter.bsv</string>
 			</dict>
 
 
@@ -119,18 +118,18 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.class.verilog</string>
+						<string>entity.name.type.class.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>keyword.other.verilog</string>
+						<string>keyword.other.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*\b(?!else)(?!begin)([a-zA-Z_][a-zA-Z0-9_]*)\b\s+([#])</string>
 				<key>name</key>
-				<string>meta.definition.withparameter.verilog</string>
+				<string>meta.definition.withparameter.bsv</string>
 			</dict>
 
 
@@ -141,58 +140,58 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>keyword.other.verilog</string>
+						<string>keyword.other.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.instance.verilog</string>
+						<string>entity.name.type.instance.bsv</string>
 					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
-						<string>meta.module.parameters.verilog</string>
+						<string>meta.module.parameters.bsv</string>
 					</dict>
 					<key>4</key>
 					<dict>
 						<key>name</key>
-						<string>keyword.other.verilog</string>
+						<string>keyword.other.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*(defparam)\s+([a-zA-Z_][a-zA-Z0-9_]*)(.[a-zA-Z_][a-zA-Z0-9_]*)\s*(=)</string>
 				<key>name</key>
-				<string>meta.definition.defparam.verilog</string>
+				<string>meta.definition.defparam.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>\b(automatic|cell|config|deassign|defparam|design|disable|edge|endconfig|endgenerate|endspecify|endtable|endtask|event|generate|genvar|ifnone|incdir|include|instance|liblist|library|localparam|macromodule|negedge|noshowcancelled|posedge|pulsestyle_onevent|pulsestyle_ondetect|real|realtime|scalared|showcancelled|specify|specparam|table|task|time|use|vectored)\b</string>
 				<key>name</key>
-				<string>keyword.other.verilog</string>
+				<string>keyword.other.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>(#[0-9]+)</string>
 				<key>name</key>
-				<string>keyword.delay.verilog</string>
+				<string>keyword.delay.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>\b(initial|always|wait|force|release|assign)\b</string>
 				<key>name</key>
-				<string>keyword.control.verilog</string>
+				<string>keyword.control.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>\b(begin|end|fork|join)\b</string>
 				<key>name</key>
-				<string>keyword.other.verilog</string>
+				<string>keyword.other.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>\b(forever|repeat|while|for|if|else|case|casex|casez|default|endcase)\b</string>
 				<key>name</key>
-				<string>keyword.control.verilog</string>
+				<string>keyword.control.bsv</string>
 			</dict>
 			<dict>
 				<key>captures</key>
@@ -200,19 +199,19 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<!-- <string>keyword.other.verilog</string> -->
-						<string>meta.preprocessor.verilog</string>
+						<!-- <string>keyword.other.bsv</string> -->
+						<string>meta.preprocessor.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.include.verilog</string>
+						<string>entity.name.type.include.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*(`include)\s+(["&lt;].*["&gt;])</string>
 				<key>name</key>
-				<string>meta.include.verilog</string>
+				<string>meta.include.bsv</string>
 			</dict>	
 			<dict>
 				<key>captures</key>
@@ -220,36 +219,36 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>meta.preprocessor.verilog</string>
+						<string>meta.preprocessor.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>constant.other.define.verilog</string>
+						<string>constant.other.define.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*(`ifdef|`ifndef|`undef|`define)\s+([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
 				<key>name</key>
-				<string>meta.preprocessor.ifdef.verilog</string>
+				<string>meta.preprocessor.ifdef.bsv</string>
 			</dict>
 			<dict> <!-- must come after meta.preprocess.ifdef -->
 				<key>match</key>
 				<string>`(celldefine|default_nettype|define|else|elsif|endcelldefine|endif|ifdef|ifndef|include|line|nounconnected_drive|resetall|timescale|unconnected_drive|undef)\b</string>
 				<key>name</key>
-				<string>meta.preprocessor.verilog</string>
+				<string>meta.preprocessor.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>[.][_a-zA-Z0-9]+</string>
 				<key>name</key>
-				<string>meta.module.parameters.verilog</string>
+				<string>meta.module.parameters.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>`\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
 				<key>name</key>
-				<string>constant.other.define.verilog</string>
+				<string>constant.other.define.bsv</string>
 			</dict>
 			<dict>
 				<key>include</key>
@@ -259,7 +258,7 @@
 				<key>match</key>
 				<string>\b(endmodule|endfunction|endprimitive)\b</string>
 				<key>name</key>
-				<string>storage.type.verilog</string>
+				<string>storage.type.bsv</string>
 			</dict>
 			<dict>
 				<key>captures</key>
@@ -267,18 +266,18 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.state.verilog</string>
+						<string>entity.name.state.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>keyword.operator.bitwise.verilog</string>
+						<string>keyword.operator.bitwise.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
 				<string>^\s*\b([a-zA-Z_][a-zA-Z0-9_]*)\b\s*(:)\s*</string>
 				<key>name</key>
-				<string>meta.case.verilog</string>
+				<string>meta.case.bsv</string>
 			</dict>
 			<dict>
 				<key>include</key>
@@ -288,67 +287,67 @@
 				<key>match</key>
 				<string>(==|===|!=|!==|&lt;=|&gt;=|&lt;|&gt;)</string>
 				<key>name</key>
-				<string>keyword.operator.comparison.verilog</string>
+				<string>keyword.operator.comparison.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>(\-|\+|\*|\/|%)</string>
 				<key>name</key>
-				<string>keyword.operator.arithmetic.verilog</string>
+				<string>keyword.operator.arithmetic.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>(!|&amp;&amp;|\|\||\bor\b)</string>
 				<key>name</key>
-				<string>keyword.operator.logical.verilog</string>
+				<string>keyword.operator.logical.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>(&amp;|\||\^|~|&lt;&lt;|&gt;&gt;|\?|:)</string>
 				<key>name</key>
-				<string>keyword.operator.bitwise.verilog</string>
+				<string>keyword.operator.bitwise.bsv</string>
 			</dict>				
 			<dict>
 				<key>match</key>
 				<string>({|})</string>
 				<key>name</key>
-				<string>keyword.operator.parenthesis.curly.verilog</string>
+				<string>keyword.operator.parenthesis.curly.bsv</string>
 			</dict>				
 			<dict>
 				<key>match</key>
 				<string>(\(|\))</string>
 				<key>name</key>
-				<string>keyword.operator.parenthesis.round.verilog</string>
+				<string>keyword.operator.parenthesis.round.bsv</string>
 			</dict>				
 			<dict>
 				<key>match</key>
 				<string>(\[|\])</string>
 				<key>name</key>
-				<string>keyword.operator.parenthesis.square.verilog</string>
+				<string>keyword.operator.parenthesis.square.bsv</string>
 			</dict>				
 			<dict>
 				<key>match</key>
 				<string>([;,])</string>
 				<key>name</key>
-				<string>keyword.delimiter.verilog</string>
+				<string>keyword.delimiter.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>(#|@|=)</string>
 				<key>name</key>
-				<string>keyword.other.verilog</string>
+				<string>keyword.other.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>\b(output|input|inout|and|nand|nor|or|xor|xnor|buf|not|bufif[01]|notif[01]|r?[npc]mos|tran|r?tranif[01]|pullup|pulldown)\b</string>
 				<key>name</key>
-				<string>support.type.verilog</string>
+				<string>support.type.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
 				<string>((\b\d+)?'s?([bB]\s*(([0-1_xXzZ?]+)|(`[A-Z]+[_0-9a-zA-Z]*))|[oO]\s*(([0-7_xXzZ?]+)|(`[A-Z]+[_0-9a-zA-Z]*))|[dD]\s*(([0-9_xXzZ?]+)|(`[A-Z]+[_0-9a-zA-Z]*))|[hH]\s*(([0-9a-fA-F_xXzZ?]+)|(`[A-Z]+[_0-9a-zA-Z]*)))((e|E)(\+|-)?[0-9]+)?\b)|(\b\d+\b)</string>
 				<key>name</key>
-				<string>constant.numeric.verilog</string>
+				<string>constant.numeric.bsv</string>
 			</dict>
 			<dict>
 				<key>include</key>
@@ -358,14 +357,14 @@
 				<key>match</key>
 				<string>\$\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
 				<key>name</key>
-				<string>support.function.verilog</string>
+				<string>support.function.bsv</string>
 			</dict>
 			<!-- capital constants
 			<dict>
 				<key>match</key>
 				<string>\b([A-Z][A-Z0-9_]+)\b</string>
 				<key>name</key>
-				<string>constant.other.verilog</string>
+				<string>constant.other.bsv</string>
 			</dict>
 			-->
 		</array>
@@ -377,11 +376,11 @@
 				<array>
 					<dict>
 						<key>include</key>
-						<string>#storage-type-verilog</string>
+						<string>#storage-type-bsv</string>
 					</dict>
 					<dict>
 						<key>include</key>
-						<string>#storage-modifier-verilog</string>
+						<string>#storage-modifier-bsv</string>
 					</dict>
 				</array>
 			</dict>
@@ -397,13 +396,13 @@
 							<key>0</key>
 							<dict>
 								<key>name</key>
-								<string>punctuation.definition.comment.verilog</string>
+								<string>punctuation.definition.comment.bsv</string>
 							</dict>
 						</dict>
 						<key>end</key>
 						<string>\*/</string>
 						<key>name</key>
-						<string>comment.block.verilog</string>
+						<string>comment.block.bsv</string>
 					</dict>
 					<dict>
 						<key>captures</key>
@@ -411,29 +410,29 @@
 							<key>1</key>
 							<dict>
 								<key>name</key>
-								<string>punctuation.definition.comment.verilog</string>
+								<string>punctuation.definition.comment.bsv</string>
 							</dict>
 						</dict>
 						<key>match</key>
 						<string>(//).*$\n?</string>
 						<key>name</key>
-						<string>comment.line.double-slash.verilog</string>
+						<string>comment.line.double-slash.bsv</string>
 					</dict>
 				</array>
 			</dict>		
-			<key>storage-type-verilog</key>
+			<key>storage-type-bsv</key>
 			<dict>
 				<key>match</key>
 				<string>\b(wire|tri|tri[01]|supply[01]|wand|triand|wor|trior|trireg|reg|parameter|integer)\b</string>
 				<key>name</key>
-				<string>storage.type.verilog</string>
+				<string>storage.type.bsv</string>
 			</dict>
-			<key>storage-modifier-verilog</key>
+			<key>storage-modifier-bsv</key>
 			<dict>
 				<key>match</key>
 				<string>\b(signed|unsigned|small|medium|large|supply[01]|strong[01]|pull[01]|weak[01]|highz[01])\b</string>
 				<key>name</key>
-				<string>storage.modifier.verilog</string>
+				<string>storage.modifier.bsv</string>
 			</dict>
 			<key>strings</key>
 			<dict>
@@ -447,7 +446,7 @@
 							<key>0</key>
 							<dict>
 								<key>name</key>
-								<string>punctuation.definition.string.begin.verilog</string>
+								<string>punctuation.definition.string.begin.bsv</string>
 							</dict>
 						</dict>
 						<key>end</key>
@@ -457,18 +456,18 @@
 							<key>0</key>
 							<dict>
 								<key>name</key>
-								<string>punctuation.definition.string.end.verilog</string>
+								<string>punctuation.definition.string.end.bsv</string>
 							</dict>
 						</dict>
 						<key>name</key>
-						<string>string.quoted.double.verilog</string>
+						<string>string.quoted.double.bsv</string>
 						<key>patterns</key>
 						<array>
 							<dict>
 								<key>match</key>
 								<string>\\.</string>
 								<key>name</key>
-								<string>constant.character.escape.verilog</string>
+								<string>constant.character.escape.bsv</string>
 							</dict>
 						</array>
 					</dict>
@@ -480,7 +479,7 @@
 							<key>0</key>
 							<dict>
 								<key>name</key>
-								<string>punctuation.definition.string.begin.verilog</string>
+								<string>punctuation.definition.string.begin.bsv</string>
 							</dict>
 						</dict>
 						<key>end</key>
@@ -490,18 +489,18 @@
 							<key>0</key>
 							<dict>
 								<key>name</key>
-								<string>punctuation.definition.string.end.verilog</string>
+								<string>punctuation.definition.string.end.bsv</string>
 							</dict>
 						</dict>
 						<key>name</key>
-						<string>string.quoted.single.verilog</string>
+						<string>string.quoted.single.bsv</string>
 						<key>patterns</key>
 						<array>
 							<dict>
 								<key>match</key>
 								<string>\\.</string>
 								<key>name</key>
-								<string>constant.character.escape.verilog</string>
+								<string>constant.character.escape.bsv</string>
 							</dict>
 						</array>
 					</dict>
@@ -509,8 +508,8 @@
 			</dict>		
 		</dict>
 		<key>scopeName</key>
-		<string>source.verilog</string>
+		<string>source.bsv</string>
 		<key>uuid</key>
-		<string>6856ea09-6f82-3ead-a3ae-2dd2d81453b9</string>		
+		<string>7038ab7c-665d-45a4-a700-4ca5e113d9a6</string>
 	</dict>
 </plist>

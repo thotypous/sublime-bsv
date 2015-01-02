@@ -2,18 +2,18 @@
   "schema_version": "2.0",
   "packages": [
     {
-      "name": "Sublime Text Verilog",
-      "description": "Verilog Package for Sublime Text 2/3",
-      "author": "Tao Chen",
-      "homepage": "https://github.com/pro711/sublime-verilog",
-      "details": "https://github.com/pro711/sublime-verilog",
-      "issues" : "https://github.com/pro711/sublime-verilog/issues",
+      "name": "Sublime Text Bluespec SytemVerilog",
+      "description": "Bluespec SystemVerilog Package for Sublime Text 2/3",
+      "author": "Paulo Matias",
+      "homepage": "https://github.com/thotypous/sublime-bsv",
+      "details": "https://github.com/thotypous/sublime-bsv",
+      "issues" : "https://github.com/thotypous/sublime-bsv/issues",
       "releases" : [
         {
           "platforms": "*",
           "sublime_text": "*",
           "version": "0.1.1",
-          "url": "https://nodeload.github.com/pro711/sublime-verilog/zip/master"
+          "url": "https://nodeload.github.com/thotypous/sublime-bsv/zip/master"
         }
       ]
     }

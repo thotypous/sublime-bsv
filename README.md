@@ -1,8 +1,7 @@
-# Sublime Text Verilog
-Verilog Package for Sublime Text 2/3. Based on [Verilog plugin](http://sublime-text-community-packages.googlecode.com/svn/pages/Verilog.html) from Sublime Text Community Packages.
+# Sublime Text Bluespec SystemVerilog
+Bluespec SystemVerilog Package for Sublime Text 2/3. Based on the [Tao Chen's Verilog Package](https://github.com/pro711/sublime-verilog).
 
-Supports Verilog files (*.v, *.V)
+Supports Bluespec SystemVerilog files (\*.bsv)
 
 Features include
  - Syntax Hightlighting
- - Code snippets
