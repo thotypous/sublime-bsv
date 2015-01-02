@@ -16,122 +16,25 @@
 		<string>BSV</string>
 		<key>patterns</key>
 		<array>
-			<!-- module XXX -->
 			<dict>
 				<key>captures</key>
 				<dict>
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>storage.type.bsv</string>
+						<string>keyword.control.import.bsv</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.type.class.bsv</string>
+						<string>entity.name.package.bsv</string>
 					</dict>
 				</dict>
 				<key>match</key>
-				<string>^\s*(module|function|primitive)\s+\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
+				<string>^\s*(import|export|package)\s+\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
 				<key>name</key>
-				<string>meta.entity.module.bsv</string>
+				<string>meta.entity.package.bsv</string>
 			</dict>
-
-			<dict>
-				<!-- modulename instancename ( -->
-				<key>captures</key>
-				<dict>
-					<key>1</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.type.class.bsv</string>
-					</dict>
-					<key>2</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.type.instance.bsv</string>
-					</dict>
-					<key>3</key>
-					<dict>
-						<key>name</key>
-						<string>keyword.operator.parenthesis.round.bsv</string>
-					</dict>
-				</dict>
-				<key>match</key>
-				<string>^\s*(?!else)(?!begin)([a-zA-Z_][a-zA-Z0-9_]*)\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*(\()</string>
-				<key>name</key>
-				<string>meta.definition.bsv</string>
-			</dict>
-
-
-			<dict>
-				<!-- modulename #(something,something,etc) instancename ( -->
-				<key>captures</key>
-				<dict>
-					<key>1</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.type.class.bsv</string>
-					</dict>
-					<key>2</key> <!-- # -->
-					<dict>
-						<key>name</key>
-						<string>keyword.other.bsv</string>
-					</dict>
-					<key>3</key> <!-- ( -->
-					<dict>
-						<key>name</key>
-						<string>keyword.operator.parenthesis.round.bsv</string>
-					</dict>
-					<key>4</key> <!-- something,something -->
-					<dict>
-						<key>name</key>
-						<string>keyword.other.bsv</string>
-					</dict>
-					<key>5</key> <!-- ) -->
-					<dict>
-						<key>name</key>
-						<string>keyword.operator.parenthesis.round.bsv</string>
-					</dict>
-					<key>6</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.type.instance.bsv</string>
-					</dict>
-					<key>7</key>
-					<dict>
-						<key>name</key>
-						<string>keyword.operator.parenthesis.round.bsv</string>
-					</dict>
-				</dict>
-				<key>match</key>
-				<string>^\s*(?!else)(?!begin)([a-zA-Z_][a-zA-Z0-9_]*)\s+([#])(\()([ ._+`,a-zA-Z0-9]+)(\))\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*(\()</string>
-				<key>name</key>
-				<string>meta.definition.withparameter.bsv</string>
-			</dict>
-
-
-			<dict>
-				<!-- IODELAY # -->
-				<key>captures</key>
-				<dict>
-					<key>1</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.type.class.bsv</string>
-					</dict>
-					<key>2</key>
-					<dict>
-						<key>name</key>
-						<string>keyword.other.bsv</string>
-					</dict>
-				</dict>
-				<key>match</key>
-				<string>^\s*\b(?!else)(?!begin)([a-zA-Z_][a-zA-Z0-9_]*)\b\s+([#])</string>
-				<key>name</key>
-				<string>meta.definition.withparameter.bsv</string>
-			</dict>
-
 
 			<dict>
 				<!-- defparam instancename.parameter = -->
@@ -165,7 +68,7 @@
 			</dict>
 			<dict>
 				<key>match</key>
-				<string>\b(automatic|cell|config|deassign|defparam|design|disable|edge|endconfig|endgenerate|endspecify|endtable|endtask|event|generate|genvar|ifnone|incdir|include|instance|liblist|library|localparam|macromodule|negedge|noshowcancelled|posedge|pulsestyle_onevent|pulsestyle_ondetect|real|realtime|scalared|showcancelled|specify|specparam|table|task|time|use|vectored)\b</string>
+				<string>\b(automatic|cell|config|deassign|defparam|design|disable|edge|endconfig|endgenerate|endspecify|endtable|endtask|event|generate|genvar|ifnone|incdir|include|liblist|library|localparam|macromodule|negedge|noshowcancelled|posedge|pulsestyle_onevent|pulsestyle_ondetect|real|realtime|scalared|showcancelled|specify|specparam|table|task|time|use|vectored)\b</string>
 				<key>name</key>
 				<string>keyword.other.bsv</string>
 			</dict>
@@ -189,9 +92,33 @@
 			</dict>
 			<dict>
 				<key>match</key>
+				<string>\b(matches|action|endaction|actionvalue|endactionvalue|ancestor|deriving|return|match|par|endpar|provisos|dependencies|determines|seq|endseq|schedule|port|clock|reset|no_reset|clocked_by|reset_by|default_clock|default_reset|output_clock|output_reset|input_clock|input_reset|same_family|import|numeric|type)\b</string>
+				<key>name</key>
+				<string>keyword.control.bsv</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\b(TAdd|TSub|TLog|TExp|TMul|TDiv|TMin|TMax)\b</string>
+				<key>name</key>
+				<string>keyword.typesystem.math.bsv</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\b(Bits|DefaultValue|Eq|Ord|Bounded|Arith|Literal|Bitwise|BitReduction|BitExtend|IsModule|Add|Max|Log|Mul|Div)\b</string>
+				<key>name</key>
+				<string>keyword.typesystem.typeclass.bsv</string>
+			</dict>
+			<dict>
+				<key>match</key>
 				<string>\b(forever|repeat|while|for|if|else|case|casex|casez|default|endcase)\b</string>
 				<key>name</key>
 				<string>keyword.control.bsv</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\b(endpackage)\b</string>
+				<key>name</key>
+				<string>keyword.control.import.bsv</string>
 			</dict>
 			<dict>
 				<key>captures</key>
@@ -246,6 +173,12 @@
 			</dict>
 			<dict>
 				<key>match</key>
+				<string>\b(True|False)\b</string>
+				<key>name</key>
+				<string>constant.language.bsv</string>
+			</dict>
+			<dict>
+				<key>match</key>
 				<string>`\b([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
 				<key>name</key>
 				<string>constant.other.define.bsv</string>
@@ -255,8 +188,12 @@
 				<string>#comments</string>
 			</dict>
 			<dict>
+				<key>include</key>
+				<string>#pragma-compiler-bsv</string>
+			</dict>
+			<dict>
 				<key>match</key>
-				<string>\b(endmodule|endfunction|endprimitive)\b</string>
+				<string>\b(let|module|endmodule|rule|endrule|rules|endrules|interface|endinterface|method|endmethod|function|endfunction|instance|endinstance|typeclass|endtypeclass|primitive|endprimitive)\b</string>
 				<key>name</key>
 				<string>storage.type.bsv</string>
 			</dict>
@@ -275,9 +212,9 @@
 					</dict>
 				</dict>
 				<key>match</key>
-				<string>^\s*\b([a-zA-Z_][a-zA-Z0-9_]*)\b\s*(:)\s*</string>
+				<string>(?:^|\{|,)\s*\b(?!endmodule|endrule|endinterface|endmethod|endfunction|endinstance|endtypeclass)\b([a-zA-Z_][a-zA-Z0-9_]*)\b\s*(:)(?!:)\s*</string>
 				<key>name</key>
-				<string>meta.case.bsv</string>
+				<string>meta.case.bsv</string><!-- or struct member in type constructor -->
 			</dict>
 			<dict>
 				<key>include</key>
@@ -380,6 +317,10 @@
 					</dict>
 					<dict>
 						<key>include</key>
+						<string>#storage-type-standard-bsv</string>
+					</dict>
+					<dict>
+						<key>include</key>
 						<string>#storage-modifier-bsv</string>
 					</dict>
 				</array>
@@ -420,12 +361,41 @@
 					</dict>
 				</array>
 			</dict>		
+			<key>pragma-compiler-bsv</key>
+			<dict>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>begin</key>
+						<string>\(\*</string>
+						<key>captures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.comment.bsv</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>\*\)</string>
+						<key>name</key>
+						<string>pragma.compiler.bsv</string>
+					</dict>
+				</array>
+			</dict>
 			<key>storage-type-bsv</key>
 			<dict>
 				<key>match</key>
-				<string>\b(wire|tri|tri[01]|supply[01]|wand|triand|wor|trior|trireg|reg|parameter|integer)\b</string>
+				<string>\b(wire|tri|tri[01]|supply[01]|wand|triand|wor|trior|trireg|reg|parameter|integer|typedef|struct|enum|tagged|union)\b</string>
 				<key>name</key>
 				<string>storage.type.bsv</string>
+			</dict>
+			<key>storage-type-standard-bsv</key>
+			<dict>
+				<key>match</key>
+				<string>\b(void|Action|ActionValue|Integer|Nat|Inout|Bit|UInt|Int|Bool|Maybe|String|Either|Rules|Module|Clock|Reset|Power|Empty|Array|Reg|RWire|Wire|BypassWire|DWire|PulseWire|ReadOnly|WriteOnly|Vector|List|RegFile|FIFO|FIFOF|Stmt)\b</string>
+				<key>name</key>
+				<string>storage.type.standard.bsv</string>
 			</dict>
 			<key>storage-modifier-bsv</key>
 			<dict>
@@ -461,39 +431,6 @@
 						</dict>
 						<key>name</key>
 						<string>string.quoted.double.bsv</string>
-						<key>patterns</key>
-						<array>
-							<dict>
-								<key>match</key>
-								<string>\\.</string>
-								<key>name</key>
-								<string>constant.character.escape.bsv</string>
-							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>begin</key>
-						<string>'</string>
-						<key>beginCaptures</key>
-						<dict>
-							<key>0</key>
-							<dict>
-								<key>name</key>
-								<string>punctuation.definition.string.begin.bsv</string>
-							</dict>
-						</dict>
-						<key>end</key>
-						<string>'</string>
-						<key>endCaptures</key>
-						<dict>
-							<key>0</key>
-							<dict>
-								<key>name</key>
-								<string>punctuation.definition.string.end.bsv</string>
-							</dict>
-						</dict>
-						<key>name</key>
-						<string>string.quoted.single.bsv</string>
 						<key>patterns</key>
 						<array>
 							<dict>
