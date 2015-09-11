@@ -11,7 +11,7 @@
 		<key>foldingStartMarker</key>
 		<string>(begin)\s*(//.*)?$</string>
 		<key>foldingStopMarker</key>
-		<string>^\s*(end)$</string>		
+		<string>^\s*(end)$</string>
 		<key>name</key>
 		<string>BSV</string>
 		<key>patterns</key>
@@ -74,12 +74,6 @@
 			</dict>
 			<dict>
 				<key>match</key>
-				<string>(#[0-9]+)</string>
-				<key>name</key>
-				<string>keyword.delay.bsv</string>
-			</dict>
-			<dict>
-				<key>match</key>
 				<string>\b(initial|always|wait|force|release|assign)\b</string>
 				<key>name</key>
 				<string>keyword.control.bsv</string>
@@ -139,7 +133,7 @@
 				<string>^\s*(`include)\s+(["&lt;].*["&gt;])</string>
 				<key>name</key>
 				<string>meta.include.bsv</string>
-			</dict>	
+			</dict>
 			<dict>
 				<key>captures</key>
 				<dict>
@@ -219,7 +213,7 @@
 			<dict>
 				<key>include</key>
 				<string>#all-types</string>
-			</dict>			
+			</dict>
 			<dict>
 				<key>match</key>
 				<string>(==|===|!=|!==|&lt;=|&gt;=|&lt;|&gt;)</string>
@@ -243,25 +237,25 @@
 				<string>(&amp;|\||\^|~|&lt;&lt;|&gt;&gt;|\?|:)</string>
 				<key>name</key>
 				<string>keyword.operator.bitwise.bsv</string>
-			</dict>				
+			</dict>
 			<dict>
 				<key>match</key>
 				<string>({|})</string>
 				<key>name</key>
 				<string>keyword.operator.parenthesis.curly.bsv</string>
-			</dict>				
+			</dict>
 			<dict>
 				<key>match</key>
 				<string>(\(|\))</string>
 				<key>name</key>
 				<string>keyword.operator.parenthesis.round.bsv</string>
-			</dict>				
+			</dict>
 			<dict>
 				<key>match</key>
 				<string>(\[|\])</string>
 				<key>name</key>
 				<string>keyword.operator.parenthesis.square.bsv</string>
-			</dict>				
+			</dict>
 			<dict>
 				<key>match</key>
 				<string>([;,])</string>
@@ -279,6 +273,12 @@
 				<string>\b(output|input|inout|and|nand|nor|or|xor|xnor|buf|not|bufif[01]|notif[01]|r?[npc]mos|tran|r?tranif[01]|pullup|pulldown)\b</string>
 				<key>name</key>
 				<string>support.type.bsv</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\b(?i:(\d+\.\d*(e[\-\+]?\d+)?))(?=[^a-zA-Z_])</string>
+				<key>name</key>
+				<string>constant.numeric.real.bsv</string>
 			</dict>
 			<dict>
 				<key>match</key>
@@ -360,7 +360,7 @@
 						<string>comment.line.double-slash.bsv</string>
 					</dict>
 				</array>
-			</dict>		
+			</dict>
 			<key>pragma-compiler-bsv</key>
 			<dict>
 				<key>patterns</key>
@@ -393,7 +393,7 @@
 			<key>storage-type-standard-bsv</key>
 			<dict>
 				<key>match</key>
-				<string>\b(void|Action|ActionValue|Integer|Nat|Inout|Bit|UInt|Int|Bool|Maybe|String|Either|Rules|Module|Clock|Reset|Power|Empty|Array|Reg|RWire|Wire|BypassWire|DWire|PulseWire|ReadOnly|WriteOnly|Vector|List|RegFile|FIFO|FIFOF|Stmt)\b</string>
+				<string>\b(void|Action|ActionValue|Integer|Nat|Real|Inout|Bit|UInt|Int|Bool|Maybe|String|Either|Rules|Module|Clock|Reset|Power|Empty|Array|Reg|RWire|Wire|BypassWire|DWire|PulseWire|ReadOnly|WriteOnly|Vector|List|RegFile|FIFO|FIFOF|Stmt)\b</string>
 				<key>name</key>
 				<string>storage.type.standard.bsv</string>
 			</dict>
@@ -442,7 +442,7 @@
 						</array>
 					</dict>
 				</array>
-			</dict>		
+			</dict>
 		</dict>
 		<key>scopeName</key>
 		<string>source.bsv</string>
