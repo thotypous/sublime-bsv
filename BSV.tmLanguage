@@ -98,7 +98,7 @@
 			</dict>
 			<dict>
 				<key>match</key>
-				<string>\b(Bits|DefaultValue|Eq|Ord|Bounded|Arith|Literal|Bitwise|BitReduction|BitExtend|IsModule|Add|Max|Log|Mul|Div)\b</string>
+				<string>\b(Bits|DefaultValue|Eq|Ord|Bounded|Arith|Literal|Bitwise|BitReduction|BitExtend|FShow|IsModule|Add|Max|Log|Mul|Div)\b</string>
 				<key>name</key>
 				<string>keyword.typesystem.typeclass.bsv</string>
 			</dict>
